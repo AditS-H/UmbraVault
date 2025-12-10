@@ -1,0 +1,4 @@
+{
+  "nmap": {"cmd": "nmap -sV -T4 {target} -oN /app/logs/nmap_{target}.txt"},
+  "masscan": {"cmd": "masscan -p1-65535 {target} --rate=1000"}
+}

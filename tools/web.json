@@ -1,0 +1,5 @@
+{
+  "gobuster": {"cmd": "gobuster dir -u {target} -w /usr/share/wordlists/dirb/common.txt -o /app/logs/gobuster_{target}.txt"},
+  "nikto": {"cmd": "nikto -host {target} -output /app/logs/nikto_{target}.txt"},
+  "sqlmap": {"cmd": "sqlmap -u {target} --batch --output-dir=/app/logs/sqlmap_{target}"}
+}

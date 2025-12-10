@@ -1,0 +1,15 @@
+{
+  "api": {
+    "host": "127.0.0.1",
+    "port": 8888,
+    "secret_token": "434d7f064e0edc987aa48bfec8d749d3560305cef796d1c419a39691b904d642"
+  },
+  "docker": {
+    "image": "kalitools:latest",
+    "timeout": 300
+  },
+  "tools_path": "./tools/",
+  "logs_path": "./logs/",
+  "sandbox": false,
+  "ai_model": null
+}

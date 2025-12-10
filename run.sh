@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+ROOT_DIR="$(cd "$(dirname "$0")" && pwd)"
+source "$ROOT_DIR/venv/bin/activate" 2>/dev/null || true
+mkdir -p "$ROOT_DIR/logs"
+case "$1" in
+  api)
+    python -m src.server
+    ;;
+  tui)
+    python -m src.tui
+    ;;
+  *)
+    echo "Usage: ./run.sh [api|tui]"
+    ;;
+esac

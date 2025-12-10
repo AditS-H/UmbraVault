@@ -1,0 +1,13 @@
+flask==3.0.3
+requests==2.32.3
+psutil==6.0.0
+beautifulsoup4==4.12.3
+selenium==4.23.1
+webdriver-manager==4.0.2
+aiohttp==3.10.5
+mitmproxy==11.0.0
+rich==13.9.3
+pytest==8.3.3
+pyjwt==2.8.0
+docker==6.1.0
+# ollama==0.0.0  # optional: uncomment if you have local Ollama and pip package

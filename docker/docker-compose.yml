@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  tools:
+    image: kalitools:latest
+    volumes:
+      - ../logs:/app/logs:rw
+    network_mode: "host"
+    cap_add:
+      - NET_ADMIN
