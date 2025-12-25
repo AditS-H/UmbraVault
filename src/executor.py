@@ -84,17 +84,34 @@ class ToolExecutor:
             except DockerException as e:
                 # Fallback to docker CLI if SDK cannot connect (common on mixed Windows/WSL envs)
                 try:
+                    # Bind-mount logs to allow tools to write output directly
+                    logs_abs = str(self.logs_path.resolve())
                     cli_cmd = [
-                        'docker', 'run', '--rm', '--network', 'host', self.image,
+                        'docker', 'run', '--rm', '--network', 'host',
+                        '-v', f'{logs_abs}:/app/logs:rw',
+                        self.image,
                         '/bin/bash', '-lc', cmd
                     ]
                     res = subprocess.run(cli_cmd, capture_output=True, text=True, timeout=self.timeout)
                     output = res.stdout + ("\n" + res.stderr if res.stderr else "")
+                    
+                    # Enhanced error detection with remediation hints
+                    error_msg = None
+                    if res.returncode != 0:
+                        if 'No such file or directory' in output and '/app/logs' in output:
+                            error_msg = f'docker CLI exit {res.returncode} | Hint: Logs directory not accessible in container. Verify bind mount.'
+                        elif 'does not exist' in output and 'wordlist' in output.lower():
+                            error_msg = f'docker CLI exit {res.returncode} | Hint: Wordlist not found. Install seclists in Docker image or update tool config.'
+                        elif 'connection timed out' in output.lower():
+                            error_msg = f'docker CLI exit {res.returncode} | Hint: Target unreachable or timeout too short.'
+                        else:
+                            error_msg = f'docker CLI exit {res.returncode}'
+                    
                     return {
                         'success': res.returncode == 0,
                         'output': output,
                         'elapsed': time.time() - start,
-                        'error': None if res.returncode == 0 else f'docker CLI exit {res.returncode}'
+                        'error': error_msg
                     }
                 except Exception as ce:
                     return {'success': False, 'output': '', 'error': f'Docker error: {e}; CLI error: {ce}', 'elapsed': time.time() - start}

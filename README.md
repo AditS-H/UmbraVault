@@ -11,31 +11,35 @@ A secure, modular penetration testing toolkit that runs tools (nmap, gobuster, s
 ✅ **Modular Tool System**: JSON configs for 20+ tools (easily expand to 150+)  
 ✅ **AI-Ready**: Optional local Ollama integration for smart tool suggestions  
 ✅ **Security-First**: JWT auth, localhost-only API, timeout limits  
+✅ **Pre-flight Checks**: Auto-validates Docker, config, and dependencies before running  
+✅ **Smart Error Messages**: Detailed hints for common failures (missing wordlists, timeouts)  
 ✅ **Local Testing**: Designed for safe use against your own VMs/containers  
 
-## Quick Start (WSL)
+**Quick Start (WSL)**
 
-**Current Status**: ✅ Core framework tested and working! Docker setup required for full functionality.
+**Current Status**: ✅ Enhanced with preflight validation, better error handling, and SecLists integration!
+
+**Check dependencies** before first run:
+
+```bash
+cd /mnt/e/Hacking/hexstrike-local
+source venv/bin/activate
+python3 scripts/check_deps.py        # Verify Docker, tools, wordlists
+python3 src/validator.py             # Validate config.json
+python3 scripts/check_tool_versions.py  # Display installed tool versions
+```
 
 **One-command setup** (installs Docker + builds tools):
 
 ```bash
-cd /mnt/e/Hacking/hexstrike-local
 chmod +x setup-wsl.sh
 ./setup-wsl.sh
-```
-
-**Test without Docker** (safe commands only):
-
-```bash
-source venv/bin/activate
-python3 test_framework.py
 ```
 
 **Run Interactive TUI**:
 
 ```bash
-./run.sh tui
+./run.sh tui  # Now with preflight checks and error hints!
 ```
 
 **Or Run API Server**:
