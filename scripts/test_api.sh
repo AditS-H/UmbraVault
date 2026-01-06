@@ -13,7 +13,7 @@ if [[ -z "$TOKEN" ]]; then
     exit 1
 fi
 
-echo "=== Testing HexStrike-Local API ==="
+echo "=== Testing UmbraVault API ==="
 echo ""
 
 # Test health endpoint

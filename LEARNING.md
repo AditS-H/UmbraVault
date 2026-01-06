@@ -1,13 +1,13 @@
-# 🔥 HexStrike-Local: Complete Learning Guide
+# 🔥 UmbraVault: Complete Learning Guide
 
 ```
-██╗  ██╗███████╗██╗  ██╗███████╗████████╗██████╗ ██╗██╗  ██╗███████╗
-██║  ██║██╔════╝╚██╗██╔╝██╔════╝╚══██╔══╝██╔══██╗██║██║ ██╔╝██╔════╝
-███████║█████╗   ╚███╔╝ ███████╗   ██║   ██████╔╝██║█████╔╝ █████╗  
-██╔══██║██╔══╝   ██╔██╗ ╚════██║   ██║   ██╔══██╗██║██╔═██╗ ██╔══╝  
-██║  ██║███████╗██╔╝ ██╗███████║   ██║   ██║  ██║██║██║  ██╗███████╗
-╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚══════╝
-                    LOCAL PENTESTING FRAMEWORK
+██╗   ██╗███╗   ███╗██████╗ ██████╗  █████╗ ██╗   ██╗ █████╗ ██╗   ██╗██╗  ████████╗
+██║   ██║████╗ ████║██╔══██╗██╔══██╗██╔══██╗██║   ██║██╔══██╗██║   ██║██║  ╚══██╔══╝
+██║   ██║██╔████╔██║██████╔╝██████╔╝███████║██║   ██║███████║██║   ██║██║     ██║   
+██║   ██║██║╚██╔╝██║██╔══██╗██╔══██╗██╔══██║╚██╗ ██╔╝██╔══██║██║   ██║██║     ██║   
+╚██████╔╝██║ ╚═╝ ██║██████╔╝██║  ██║██║  ██║ ╚████╔╝ ██║  ██║╚██████╔╝███████╗██║   
+ ╚═════╝ ╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝  ╚═══╝  ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝   
+                        LOCAL PENTESTING FRAMEWORK
 ```
 
 > **A secure, modular, AI-powered penetration testing framework with Docker sandboxing**
@@ -16,7 +16,7 @@
 
 ## 📑 Table of Contents
 
-1. [What is HexStrike-Local?](#-what-is-hexstrike-local)
+1. [What is UmbraVault?](#-what-is-umbravault)
 2. [Architecture Overview](#-architecture-overview)
 3. [Core Components Deep Dive](#-core-components-deep-dive)
 4. [Security Model](#-security-model)
@@ -35,17 +35,17 @@
 
 ---
 
-## 🎯 What is HexStrike-Local?
+## 🎯 What is UmbraVault?
 
 ### Overview
 
-HexStrike-Local is a **local-only penetration testing automation framework** designed for ethical hackers and security researchers. It provides a secure way to run offensive security tools (like nmap, gobuster, sqlmap) inside **isolated Docker containers** while offering both an interactive terminal interface and a REST API.
+UmbraVault is a **local-only penetration testing automation framework** designed for ethical hackers and security researchers. It provides a secure way to run offensive security tools (like nmap, gobuster, sqlmap) inside **isolated Docker containers** while offering both an interactive terminal interface and a REST API.
 
 ### Key Philosophy
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                    HEXSTRIKE DESIGN PRINCIPLES                      │
+│                    UMBRAVAULT DESIGN PRINCIPLES                     │
 ├─────────────────────────────────────────────────────────────────────┤
 │  🔒 Security First    → All tools sandboxed in Docker containers    │
 │  🧩 Modularity        → JSON-based tool configs, easy to extend     │
@@ -58,7 +58,7 @@ HexStrike-Local is a **local-only penetration testing automation framework** des
 
 ### What Problems Does It Solve?
 
-| Problem | HexStrike Solution |
+| Problem | UmbraVault Solution |
 |---------|-------------------|
 | Running pentest tools can be dangerous on host | Docker sandboxing isolates execution |
 | Manual tool execution is tedious | Automated tool selection & chaining |
@@ -75,7 +75,7 @@ HexStrike-Local is a **local-only penetration testing automation framework** des
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────┐
-│                           HEXSTRIKE-LOCAL ARCHITECTURE                        │
+│                           UMBRAVAULT ARCHITECTURE                             │
 └──────────────────────────────────────────────────────────────────────────────┘
 
                               ┌─────────────────┐
@@ -804,7 +804,7 @@ curl -X POST http://127.0.0.1:8888/run/web \
     │ ⚠️ Warnings:  │    │  🚀 Ready           │
     │ • Issue 1     │    │                     │
     │ • Issue 2     │    │  ╭─────────────────╮│
-    │               │    │  │ HexStrike TUI   ││
+    │               │    │  │ UmbraVault TUI  ││
     │ Continue? y/n │    │  │ Enter 'quit'    ││
     └───────────────┘    │  ╰─────────────────╯│
                          └─────────────────────┘
@@ -1126,7 +1126,7 @@ logs/
 
 ```json
 {
-  "$schema": "HexStrike Report v1.0",
+  "$schema": "UmbraVault Report v1.0",
   "timestamp": "ISO 8601 datetime",
   "task_type": "network | web",
   "results": [
@@ -1173,7 +1173,7 @@ logs/
 
 ```bash
 # 1. Clone and enter directory
-cd /mnt/e/Hacking/hexstrike-local
+cd /mnt/e/Hacking/umbravault
 
 # 2. Run automated setup
 chmod +x setup-wsl.sh
@@ -1344,7 +1344,7 @@ python3 scripts/generate_token.py
 │                    FILE REFERENCE                                │
 └─────────────────────────────────────────────────────────────────┘
 
-    hexstrike-local/
+    umbravault/
     │
     ├── config.json              # Main configuration
     ├── config_no_docker.json    # Config for non-Docker mode

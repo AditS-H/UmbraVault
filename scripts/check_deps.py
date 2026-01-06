@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Pre-flight dependency checker for HexStrike-Local
+Pre-flight dependency checker for UmbraVault
 Verifies Docker, wordlists, and tools are accessible
 """
 import subprocess
@@ -103,7 +103,7 @@ def check_tool_in_container(tool_name, image_name='kalitools:latest'):
 
 def main():
     console = Console()
-    console.print("\n[bold cyan]🔍 HexStrike-Local Dependency Check[/bold cyan]\n")
+    console.print("\n[bold cyan]🔍 UmbraVault Dependency Check[/bold cyan]\n")
     
     table = Table(show_header=True, header_style="bold magenta")
     table.add_column("Component", style="dim", width=25)

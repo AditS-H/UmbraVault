@@ -10,7 +10,7 @@ try:
     from src.executor import ToolExecutor
     from src.reporter import Reporter
     
-    print("=== HexStrike-Local Test (No Docker) ===\n")
+    print("=== UmbraVault Test (No Docker) ===\n")
     
     # Load config
     config_path = Path(__file__).parent / 'config_no_docker.json'
@@ -35,7 +35,7 @@ try:
     
     # Override with safe echo command for testing
     safe_tool_config = {
-        "echo_test": {"cmd": "echo Testing HexStrike with target"}
+        "echo_test": {"cmd": "echo Testing UmbraVault with target"}
     }
     test_file = test_tools_dir / 'test.json'
     with open(test_file, 'w') as f:

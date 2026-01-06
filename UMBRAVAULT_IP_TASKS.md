@@ -1,4 +1,4 @@
-# HexStrike-Local: IP Validation and Task Execution Details
+# UmbraVault: IP Validation and Task Execution Details
 
 ## What It Checks For IPs
 - **IPv4/IPv6 format**: Validates targets as IPv4 (e.g., `106.221.225.38`) or IPv6 using strict patterns.
@@ -40,7 +40,7 @@
 ## Quick Fixes (Recommended)
 - **Bind-mount logs in CLI fallback**:
   - Add `-v <host_logs>:/app/logs:rw` to `docker run` in `src/executor.py` and ensure the host `logs/` exists.
-  - Host path example on WSL: `/mnt/e/Hacking/hexstrike-local/logs`.
+  - Host path example on WSL: `/mnt/e/Hacking/umbravault/logs`.
 - **Create `/app/logs` inside image**:
   - In `Dockerfile.tools`, add `RUN mkdir -p /app/logs`.
 - **Update gobuster wordlist**:

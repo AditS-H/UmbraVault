@@ -1,1 +1,1 @@
-"""HexStrike-Local core package"""
+"""UmbraVault core package"""
