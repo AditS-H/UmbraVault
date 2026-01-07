@@ -22,7 +22,7 @@ A secure, modular penetration testing toolkit that runs tools (nmap, gobuster, s
 **Check dependencies** before first run:
 
 ```bash
-cd /mnt/e/Hacking/hexstrike-local
+cd /mnt/e/Hacking/umbravault
 source venv/bin/activate
 python3 scripts/check_deps.py        # Verify Docker, tools, wordlists
 python3 src/validator.py             # Validate config.json
@@ -81,7 +81,7 @@ All external tools execute inside `kalitools:latest` container with:
 ## Project Structure
 
 ```
-hexstrike-local/
+umbravault/
 ├── src/               # Core Python modules
 ├── docker/            # Sandbox container definitions
 ├── tools/             # JSON tool configs (network, web)

@@ -10,7 +10,7 @@ try:
     from src.executor import ToolExecutor
     from src.reporter import Reporter
     
-    print("=== HexStrike-Local: Full Docker Test ===\n")
+    print("=== UmbraVault: Full Docker Test ===\n")
     
     # Load config
     config_path = Path(__file__).parent / 'config.json'

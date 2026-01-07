@@ -131,7 +131,7 @@ Output: test 127.0.0.1
 
 ### check_deps.py Output
 ```
-🔍 HexStrike-Local Dependency Check
+🔍 UmbraVault Dependency Check
 
 [Rich Table showing all components ✅]
 

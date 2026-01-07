@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Tool version checker for HexStrike-Local
+Tool version checker for UmbraVault
 Displays versions of installed pentesting tools in Docker image
 """
 import subprocess

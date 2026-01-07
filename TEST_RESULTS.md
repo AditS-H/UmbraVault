@@ -1,4 +1,4 @@
-# HexStrike-Local: Test Results & Status
+# UmbraVault: Test Results & Status
 
 **Test Date**: December 2, 2025  
 **Status**: ✅ **WORKING** (without Docker)  
@@ -185,7 +185,7 @@ tests/test_sanitizer.py::test_sanitize_invalid_injection PASSED
 
 ### Quick Test (Safe, No Tools)
 ```bash
-cd /mnt/e/Hacking/hexstrike-local
+cd /mnt/e/Hacking/umbravault
 source venv/bin/activate
 python3 test_framework.py
 ```
@@ -252,7 +252,7 @@ A **fully functional pentesting framework** with:
 Run the automated setup script (handles everything):
 
 ```bash
-cd /mnt/e/Hacking/hexstrike-local
+cd /mnt/e/Hacking/umbravault
 chmod +x setup-wsl.sh
 ./setup-wsl.sh
 ```

@@ -1,4 +1,4 @@
-# HexStrike-Local: WSL Quick Start Guide
+# UmbraVault: WSL Quick Start Guide
 
 ## Prerequisites (Windows with WSL)
 
@@ -12,7 +12,7 @@
 2. **Access your project in WSL**:
    ```bash
    # In WSL terminal
-   cd /mnt/e/Hacking/hexstrike-local
+   cd /mnt/e/Hacking/umbravault
    ```
 
 ## One-Command Setup
@@ -47,7 +47,7 @@ sudo usermod -aG docker $USER
 ### 2. Create Virtual Environment
 
 ```bash
-cd /mnt/e/Hacking/hexstrike-local
+cd /mnt/e/Hacking/umbravault
 python3 -m venv venv
 source venv/bin/activate
 pip install --upgrade pip
@@ -91,7 +91,7 @@ source venv/bin/activate
 python -m pytest tests/ -v
 ```
 
-## Running HexStrike-Local
+## Running UmbraVault
 
 ### Option A: Interactive TUI (Recommended for beginners)
 
@@ -279,7 +279,7 @@ python -m pytest tests/ -vv
 ## File Structure Reference
 
 ```
-hexstrike-local/
+umbravault/
 ├── README.md              # Overview
 ├── QUICKSTART_WSL.md      # This guide
 ├── config.json            # Settings (edit token!)

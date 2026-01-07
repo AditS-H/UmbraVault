@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# WSL Setup Script for HexStrike-Local
+# WSL Setup Script for UmbraVault
 set -e
 
-echo "=== HexStrike-Local WSL Setup ==="
+echo "=== UmbraVault WSL Setup ==="
 echo ""
 
 # Check Python

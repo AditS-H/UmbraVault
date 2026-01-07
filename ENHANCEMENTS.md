@@ -1,4 +1,4 @@
-# HexStrike-Local Enhancement Summary
+# UmbraVault Enhancement Summary
 
 ## Improvements Applied (December 2025)
 
@@ -123,7 +123,7 @@ python3 scripts/check_tool_versions.py
 - `scripts/check_deps.py` - Dependency checker
 - `scripts/check_tool_versions.py` - Tool version display
 - `scripts/rebuild_docker.sh` - Rebuild automation
-- `HEXSTRIKE_IP_TASKS.md` - IP validation documentation
+- `UMBRAVAULT_IP_TASKS.md` - IP validation documentation
 
 ## Next Steps (Optional)
 

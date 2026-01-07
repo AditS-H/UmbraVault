@@ -1,5 +1,5 @@
 """
-Configuration validator for HexStrike-Local
+Configuration validator for UmbraVault
 Validates config.json and runtime environment before task execution
 """
 import json
@@ -139,7 +139,7 @@ class ConfigValidator:
 if __name__ == '__main__':
     """Run preflight checks from command line"""
     config_file = sys.argv[1] if len(sys.argv) > 1 else './config.json'
-    print("🔍 Running HexStrike-Local preflight checks...\n")
+    print("🔍 Running UmbraVault preflight checks...\n")
     
     issues = ConfigValidator.run_preflight_checks(config_file)
     

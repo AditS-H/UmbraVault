@@ -33,7 +33,7 @@ def main_tui(config_path: str = None):
     executor = ToolExecutor(config)
     reporter = Reporter(config.get('logs_path', './logs/'))
 
-    console.print(Panel("HexStrike-Local TUI: Enter 'quit' to exit.", title="🚀 Ready"))
+    console.print(Panel("UmbraVault TUI: Enter 'quit' to exit.", title="🚀 Ready"))
 
     while True:
         task_type = Prompt.ask("Task type", choices=['network', 'web', 'quit'])
